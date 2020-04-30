@@ -1,0 +1,27 @@
+var classRawTile =
+[
+    [ "RawTile", "classRawTile.html#a0d3ea62e49b44183db211a1017b673b4", null ],
+    [ "~RawTile", "classRawTile.html#a6b09197c64be0c10942dde1cf8b18548", null ],
+    [ "RawTile", "classRawTile.html#ab9cb496e7865c20c9e4678bd6c381261", null ],
+    [ "operator=", "classRawTile.html#a6e91a2ddf63b1e6bb228d74446c60dcf", null ],
+    [ "size", "classRawTile.html#a4aaec0288e5d3f5fbe653d55cf153bc8", null ],
+    [ "operator!=", "classRawTile.html#a399bc311a253c5572d27f51e4a473eda", null ],
+    [ "operator==", "classRawTile.html#a5fef13f37e92911061b80e2125bc2bc8", null ],
+    [ "bpc", "classRawTile.html#a21c0728e8a6e11caa69a527c3e89f977", null ],
+    [ "channels", "classRawTile.html#ad51addf9934e3cbf3a23a261f988f781", null ],
+    [ "compressionType", "classRawTile.html#ac91c2369d082758d84e14e665ef89e50", null ],
+    [ "data", "classRawTile.html#ab914435da291c2834e763231ad973144", null ],
+    [ "dataLength", "classRawTile.html#ab3347b1e277e6a9ae76e586bc2039f1e", null ],
+    [ "filename", "classRawTile.html#a1e0d331e87d42ba80b068c3c6da3eca6", null ],
+    [ "height", "classRawTile.html#ae0ba8d4613c454cbbb73251600eae303", null ],
+    [ "hSequence", "classRawTile.html#adf557b561ec0c2e012cdeaac7618ea07", null ],
+    [ "memoryManaged", "classRawTile.html#ad007b64971987d44cdfa4869e39b0ad5", null ],
+    [ "padded", "classRawTile.html#a18ef629fc3cf0b2ef09417703985bfa1", null ],
+    [ "quality", "classRawTile.html#ad75ec271caaf53e42caafadca3ceb066", null ],
+    [ "resolution", "classRawTile.html#a9bfdf53386b287f7c3fc6f55b34c7dc2", null ],
+    [ "sampleType", "classRawTile.html#ac30ec52284c5cfe298da652f009f974e", null ],
+    [ "tileNum", "classRawTile.html#a994e9e3a386bd44ceacd25f54ceacee4", null ],
+    [ "timestamp", "classRawTile.html#a5155d752cc69c6a5b1ca80d4bc5f263b", null ],
+    [ "vSequence", "classRawTile.html#a5bf652f813c72cfe6b095880da27d8d0", null ],
+    [ "width", "classRawTile.html#a0dc4fe8867632abd2d33c8834c5f3fe4", null ]
+];
