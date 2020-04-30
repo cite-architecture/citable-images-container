@@ -1,5 +1,7 @@
 
+## Sources
 
+The `iipsrv-1.1` directory mirrors the source code for version 1.1 of IIPImage, available under the GPL-3 license from <https://github.com/ruven/iipsrv>.
 
 ## Build and publish
 
