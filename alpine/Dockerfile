@@ -8,3 +8,6 @@ RUN apk add tiff tiff-dev libjpeg-turbo libjpeg-turbo-dev lighttpd
 COPY iipsrv-1.1.tar.bz2 /iipsrv-1.1.tar.bz2
 
 RUN tar -xf iipsrv-1.1.tar.bz2 && cd iipsrv-1.1 && ./configure && make
+
+
+COPY lighttpd.conf /lighttpd.conf
