@@ -5,10 +5,10 @@ var viewer = null
 // "https://www.homermultitext.org/iipsrv?DeepZoom=/project/homer/pyramidal/VenA/"
 var defaultServiceUrl = "http://127.0.0.1:8080/fcgi-bin/iipsrv.fcgi?"
 var defaultServiceZoomService = "DeepZoom="
-var defaultServicePath = "/pyramidal/"
+var defaultServicePath = "/work/pyramids/"
 var defaultServiceSuffix = ".tif"
 var defaultServiceZoomPostfix = ".dzi"
-var defaultLocalpath = "/pyramidal/"
+var defaultLocalpath = "/work/pyramids/"
 var defaultThumbWidth = 250;
 var defaultFullWidth = 5000;
 
