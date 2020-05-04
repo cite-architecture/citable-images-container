@@ -2,13 +2,29 @@
 
 
 
-Docker file and scripts are in `alpine`.
+
+## Usage
+
+To start a container: **SCRIPTS AND GIST TBA HERE**.
+
+Within a running docker container,
+
+```sh
+/serve.sh
+```
+
+starts IIPSRV and lighttpd.
+
+## Configuration
+
+-  IIPSRV fast cgi binary is in `/fcgi-bin/iipsrv.fcgi` running on port 9000 when started from `serve.sh`
+- `lighttpd` runs on port 80 in the docker container
+    - configuration file is in `/etc/lighttpd/lighttpd.conf`
+    - web root is in `/www`
+    - logs are in `/var/log/lighttpd`
+    - IIPSRV is available as `http://127.0.0.1/fcgi-bin/iipsrv.fcgi`
 
 
-Goals for container:
+## Building the container
 
-
-- √ iipsrv. (Built from archived source of version 1.1, since source download from sourceforge is so kludgy.  Better to download a specific version from git.)
-- √ a web server:
-    - √ configure fastcgi to be accessible through web server
-    - √ map container ports to local port and a local data directory to a mount point in the container
+Docker file and source files for building image are in `alpine`.  See the README in that directory.

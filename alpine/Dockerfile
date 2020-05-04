@@ -7,7 +7,8 @@ COPY iipsrv-1.1.tar.bz2 /iipsrv-1.1.tar.bz2
 RUN tar -xf iipsrv-1.1.tar.bz2 && cd iipsrv-1.1 && ./configure && make
 RUN mkdir /fcgi-bin && cp /iipsrv-1.1/src/iipsrv.fcgi /fcgi-bin
 
-COPY serve.sh /serve.sh
+COPY container-scripts/serve.sh /serve.sh
+COPY container-scripts/demo.sh /demo.sh
 
 ADD web /www
 
