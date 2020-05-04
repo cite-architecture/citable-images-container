@@ -8,5 +8,9 @@ RUN tar -xf iipsrv-1.1.tar.bz2 && cd iipsrv-1.1 && ./configure && make
 RUN mkdir /fcgi-bin && cp /iipsrv-1.1/src/iipsrv.fcgi /fcgi-bin
 
 COPY serve.sh /serve.sh
+
+ADD web /www
+
+
 RUN echo && echo "Downloading demo image..." && echo
 RUN curl http://www.homermultitext.org/VA012RN_0013.tif > /VA012RN_0013.tif
