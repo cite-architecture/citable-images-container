@@ -19,7 +19,7 @@ source envvars.sh
 ### Build
 
 ```sh
-docker build -t ${IMAGE_NAME}:latest .
+docker build -t neelsmith/ict:latest .
 ```
 
 ### Use or test a locally built image
