@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# ict.sh version 1.0.0
+#
 # Start a docker container with citable image service,
 # optionally setting values for port on the host OS,
 # and directories to mount in the container.
@@ -55,6 +57,9 @@ do
     ;;
   esac
 done
+
+# Record port in a temp file that serve.sh script can find:
+echo $PORT > port-override.txt
 
 # Run container with settings from command-line arguments:
 docker run -p ${PORT}:80 --rm -it -v $(pwd):/work ${MOUNTS} neelsmith/ict:latest  /bin/bash
