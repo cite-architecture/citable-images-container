@@ -81,7 +81,7 @@ ict.sh /pyramids/*
 On the other hand, if you have pyramidal image collections in multiple locations in your file system, you can serve all of them with a command like this:
 
 ```
-icts.sh /volume1/pyramids/* /volume2/pyramids/*
+ict.sh /volume1/pyramids/* /volume2/pyramids/*
 ```
 
 
