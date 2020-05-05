@@ -125,7 +125,12 @@ See [release notes](releases.md).
 
 ## Using IIIF with the service
 
-TBA
+IIPImage's server supports several protocols ([documented here](https://iipimage.sourceforge.io/documentation/protocol/)), including the widely used IIIF protocol, specifically [version 2.0 of the IIIF API](https://iiif.io/api/image/2.0/#abstract).
+
+The base URL for IIIF requests is the web server's root plus `fcgi-bin/iipsrv.fcgi?IIIF=`.  The root directory for pyramidal images in the container is `/pyramids`.  If you run the demo script installing a single image with the URN `urn:cite2:hmt:vaimg.2017a:VA012RN_0013`, its TIF file be in `/pyramids/hmt/vaimg/2017a/VA012RN_0013.tif/`.  You can compose standard IIIF requests with this information.  For example, the following URL requests a 500-pixel wide versoin of the full image in jpeg format:
+
+
+`http://127.0.0.1:8080/fcgi-bin/iipsrv.fcgi?IIIF=/pyramids/hmt/vaimg/2017a/VA012RN_0013.tif/full/500,/0/default.jpg`
 
 ## Building the container
 
