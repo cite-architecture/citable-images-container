@@ -30,7 +30,7 @@ Images should be organized in subdirectories mirroring the namespace, group and 
 
 
 
-In the docker container, pyramidal (tiled) images are served from the `/pyramids` directory.  You can use manually add images in the docker environment, or use the bash script described in the following section to mount directories in your host file system in the docker container.
+In the docker container, pyramidal (tiled) images are served from the `/pyramids` directory.  You can manually add images in the docker environment, or use the bash script described in the following section to mount directories in your host file system in the docker container.
 
 
 ## Usage
