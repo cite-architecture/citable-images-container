@@ -1,5 +1,6 @@
 # Release versions of docker image
 
+**1.1.0**:  tidier.  Removes temp created in  directory shared with host OS.
 
 **1.0.2**:  fixes a bug in config files when mapping container port to a custom port in the host OS.
 
