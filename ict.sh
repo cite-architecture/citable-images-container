@@ -2,17 +2,22 @@
 #
 # ict.sh version 1.0.0
 #
-# Start a docker container with citable image service,
-# optionally setting values for port on the host OS,
-# and directories to mount in the container.
+# Start a docker container with a citable image service.
+# See:
+#    https://github.com/cite-architecture/citable-images-container
+#
+# Mounts local working directory as /work in the container.
+# Supports optionally setting values for port on the host OS,
+# and directories of citable images to mount in the container.
 #
 # Usage:
 #
-#    ict.sh [-p|--port PORT_NUMBER] [/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE1 /PATH/TO/NAMESPACE2... /PATH/TO/NAMESPACEN]
+#    ict.sh [-p|--port PORT_NUMBER] [/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE_1 /PATH/TO/NAMESPACE_2... /PATH/TO/NAMESPACE_N]
 #
-
+#
 # Default values for two settings we will optionally
-# modify from command-line arguments:
+# modify from command-line arguments: port 8080,
+# no file systems to mount.
 PORT=8080
 MOUNTS=
 
@@ -31,7 +36,7 @@ do
 
     *)
     if echo "$1" | grep -q '/$'; then
-      #Trailing slash in: mount as root of service:
+      #Trailing slash: mount as root of service:
       MOUNTS+=" -v $1:/pyramids/"
       echo $MOUNTS
     elif [[ $1 == " " ]]; then
@@ -58,8 +63,9 @@ do
   esac
 done
 
-# Record port in a temp file that serve.sh script can find:
+# Record port in a temp file that serve.sh script in the docker container
+# can find:
 echo $PORT > port-override.txt
 
-# Run container with settings from command-line arguments:
+# Run container using settings from command-line arguments:
 docker run -p ${PORT}:80 --rm -it -v $(pwd):/work ${MOUNTS} neelsmith/ict:latest  /bin/bash

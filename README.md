@@ -46,9 +46,9 @@ The container is designed so that you can use the image service in two steps:
 
 #### Use a convenience script
 
-To include your own directories automatically when you start the docker container, you can use [this bash script](https://github.com/cite-architecture/citable-images-container/blob/master/ict.sh).
+To simplify adding your own directories automatically when you start the docker container, you can use [this bash script](https://github.com/cite-architecture/citable-images-container/blob/master/ict.sh) (also available [as a gist](https://gist.github.com/neelsmith/ff3be3ca13112f6adb66f0a15c740598)).
 
-The script works as follows:
+`ict.sh` works as follows:
 
 ```sh
  ict.sh [-p|--port PORT_NUMBER] [/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE_1 /PATH/TO/NAMESPACE_2... /PATH/TO/NAMESPACE_N]
