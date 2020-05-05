@@ -6,7 +6,10 @@ A docker container to serve your own collections of canonically citable images. 
 
 The service is mapped to a specified port (default: 8080) on your host computer. You can use the image citation service by opening a browser on `http://127.0.0.1:8080/` (or whatever port you chose).  The IIPImage service also  implements the IIIF protocol.
 
-### Try the citation tool
+
+
+
+## Try the citation tool
 
 For a working example of the image citation tool, see <http://www.homermultitext.org/ict2/>, or try a demo on your computer:
 
@@ -86,7 +89,7 @@ ict.sh /volume1/pyramids/* /volume2/pyramids/*
 
 
 
-Alternatively, you can manually start the docker container with command-line parameters to map image directories if you prefer.  The root of the image file hierarchy in the container is `/pyramids`, so this  example starts a bash shell in the container, makes the container's service available on port 8000 of the host operating system, makes the current directory available in the container mounted at `/work`, and uses the directory `/myimages` as the root of the image service mounted in the container at `/pyramids`.
+Alternatively, if you prefer, you can manually start the docker container with command-line parameters to map image directories.  The root of the image file hierarchy in the container is `/pyramids`, so this  example starts a bash shell in the container, makes the container's service available on port 8000 of the host operating system, makes the current directory available in the container mounted at `/work`, and uses the directory `/myimages` as the root of the image service mounted in the container at `/pyramids`.
 
 ```sh
 docker run -p 8000:80 --rm -it -v $(pwd):/work -v /myimages:/pyramids neelsmith/ict:latest  /bin/bash
@@ -102,6 +105,11 @@ Within a running docker container,
 ```
 
 starts IIPImage server and lighttpd.
+
+## Version: 1.0.0
+
+Versions of the docker image are tagged on dockerhub following semantic versioning conventions.
+
 
 ## Technical documentation: configuration of the docker image
 
