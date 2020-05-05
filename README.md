@@ -110,7 +110,7 @@ starts IIPImage server and lighttpd.
 
 Versions of the docker image are tagged on dockerhub following semantic versioning conventions.
 
-See [release notes](releases.md)
+See [release notes](releases.md).
 
 ## Technical documentation: configuration of the docker image
 
