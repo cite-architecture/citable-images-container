@@ -107,7 +107,7 @@ Within a running docker container,
 
 starts IIPImage server and lighttpd.
 
-## Latest version: 1.1.0
+## Latest version of the Docker container: 1.1.0
 
 Versions of the docker image are tagged on dockerhub following semantic versioning conventions.
 
