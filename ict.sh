@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# ict.sh version 1.0.0
+# ict.sh version 1.1.0
 #
 # Start a docker container with a citable image service.
 # See:
@@ -12,14 +12,16 @@
 #
 # Usage:
 #
-#    ict.sh [-p|--port PORT_NUMBER] [/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE_1 /PATH/TO/NAMESPACE_2... /PATH/TO/NAMESPACE_N]
+#    ict.sh [-p|--port PORT_NUMBER] [-v|--version IMAGE_VERSION] [/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE_1 /PATH/TO/NAMESPACE_2... /PATH/TO/NAMESPACE_N]
 #
 #
-# Default values for two settings we will optionally
-# modify from command-line arguments: port 8080,
-# no file systems to mount.
+# Default values for settings we will optionally
+# modify from command-line arguments:
+# port 8080, lastest version of Docker image, no file systems to mount.
 PORT=8080
+VERSION=latest
 MOUNTS=
+
 
 # Convenience function to glue bash array together
 function join_by { local IFS="$1"; shift; echo "$*"; }
@@ -33,6 +35,14 @@ do
     shift
     shift
     ;;
+
+    -v|--version)
+    # Override default VERSION setting:
+    VERSION=$2
+    shift
+    shift
+    ;;
+
 
     *)
     if echo "$1" | grep -q '/$'; then
@@ -68,4 +78,4 @@ done
 echo $PORT > port-override.txt
 
 # Run container using settings from command-line arguments:
-docker run -p ${PORT}:80 --rm -it -v $(pwd):/work ${MOUNTS} neelsmith/ict:latest  /bin/bash
+docker run -p ${PORT}:80 --rm -it -v $(pwd):/work ${MOUNTS} neelsmith/ict:${VERSION}  /bin/bash

@@ -51,7 +51,7 @@ To simplify adding your own directories automatically when you start the docker 
 `ict.sh` works as follows:
 
 ```sh
- ict.sh [-p|--port PORT_NUMBER] [/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE_1 /PATH/TO/NAMESPACE_2... /PATH/TO/NAMESPACE_N]
+ ict.sh [-p|--port PORT_NUMBER] [-v|--version VERSION][/PATH/TO/IMAGE/ROOT/] [/PATH/TO/NAMESPACE_1 /PATH/TO/NAMESPACE_2... /PATH/TO/NAMESPACE_N]
 ```
 
 With no arguments, it starts the docker container.  No images will be mounted.  
@@ -60,7 +60,8 @@ With no arguments, it starts the docker container.  No images will be mounted.
 Options:
 
 
-- `-p` or `--port` Set the port number where the service should appear on your local machine
+- `-p` or `--port` Set the port number where the service should appear on your local machine.
+- `-v` or `--version` Set the version of the Docker image.  (Default is `latest`.)
 - `/PATH/TO/IMAGE/ROOT/` A full path with trailing slash is treated as the root directory for your image collection.  Its subdirectories should be namespace-level directories of images.
 - `/PATH/TO/NAMESPACE` A path *without* trailing slash is treated as a namespace-level directory.
 
